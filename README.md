@@ -37,6 +37,6 @@ The expected project-site URL is `https://<owner>.github.io/<repository>/`. If t
 
 ## Before submitting
 
-The current local draft includes the user-confirmed 2018–2022 bachelor's study in Palembang and 2026-onward CGU Artificial Intelligence master's study, plus expanded CV-based project details. It contains the explicitly approved university email and verified LinkedIn/GitHub profiles, and the student ID is displayed in About with explicit user authorization. No phone number is displayed.
+The current local draft includes the user-confirmed 2018–2022 bachelor's study in Palembang and 2026-onward CGU Artificial Intelligence master's study, plus expanded CV-based project details. It contains the explicitly approved university email and verified LinkedIn/GitHub profiles. No student ID or phone number is displayed.
 
 The skin-lesion project is titled “A Comparative Study of Adam and SGD Optimizers for InceptionV3-Based Skin Lesion Classification” and cites the HAM10000 dataset paper (Tschandl et al., 2018; DOI 10.1038/sdata.2018.161). The available manuscript is incomplete and the notebook does not document the optimizer comparison, so the portfolio makes no performance claim. The separate 2022 cataract-classifier project was removed; selected Andal and PLN projects from the CV were added with concise descriptions. Changes remain local and have not been pushed or deployed. The reflection PDF and submission ZIP have not been created, so this draft is not yet submission-ready.

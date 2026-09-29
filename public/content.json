@@ -62,10 +62,6 @@
         "Computer vision",
         "Machine learning"
       ],
-      "studentId": {
-        "label": "STUDENT ID",
-        "value": "m1561019"
-      },
       "identity": "English name: Jonathan Tanuwijaya · 中文姓名：陳曉鴻"
     },
     "education": {
@@ -273,10 +269,6 @@
         "電腦視覺",
         "機器學習"
       ],
-      "studentId": {
-        "label": "學號",
-        "value": "m1561019"
-      },
       "identity": "英文姓名：Jonathan Tanuwijaya · 中文姓名：陳曉鴻"
     },
     "education": {
