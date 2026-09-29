@@ -249,6 +249,8 @@ const applyLanguage = (language) => {
   setText("about-body", data.about.body);
   document.getElementById("interest-list").setAttribute("aria-label", data.accessibility.interests);
   appendChips("interest-list", data.about.interests);
+  setText("student-id-label", data.about.studentId.label);
+  setText("student-id-value", data.about.studentId.value);
 
   setText("experience-eyebrow", data.experience.eyebrow);
   setText("experience-title", data.experience.title);
