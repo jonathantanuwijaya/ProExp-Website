@@ -152,7 +152,7 @@
             "text": "Google Play Store ↗",
             "href": "https://play.google.com/store/apps/details?id=com.andalsoftware.andalconnect"
           },
-          "details": "Reworked 60+ Flutter HRIS pages using Clean Architecture. Added Google Maps clock-in/out, silent push notifications, app-version controls, multi-server testing, and unit tests. Rebuilt Codemagic CI/CD; the CV reports a 60% reduction in pipeline runtime.",
+          "details": "Reworked 60+ Flutter HRIS pages using Clean Architecture. Added Google Maps clock-in/out, silent push notifications, app-version controls, multi-server testing, and unit tests. Rebuilt Codemagic CI/CD.",
           "appStoreLink": {
             "text": "App Store ↗",
             "href": "https://apps.apple.com/us/app/andal-connect/id1601168793"
@@ -374,7 +374,7 @@
             "text": "Google Play 商店 ↗",
             "href": "https://play.google.com/store/apps/details?id=com.andalsoftware.andalconnect"
           },
-          "details": "以 Flutter 和 Clean Architecture 改寫超過 60 個人資應用頁面。新增 Google Maps 上下班打卡、靜默推播、最低版本控管、多伺服器測試選擇與單元測試。重建 Codemagic CI/CD 流程；履歷記載建置時間縮短 60%。",
+          "details": "以 Flutter 和 Clean Architecture 改寫超過 60 個人資應用頁面。新增 Google Maps 上下班打卡、靜默推播、最低版本控管、多伺服器測試選擇與單元測試。重建 Codemagic CI/CD 流程。",
           "appStoreLink": {
             "text": "App Store ↗",
             "href": "https://apps.apple.com/us/app/andal-connect/id1601168793"
