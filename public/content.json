@@ -1,0 +1,228 @@
+{
+  "en": {
+    "htmlLang": "en",
+    "pageTitle": "Alex Chen — Personal Portfolio",
+    "metaDescription": "Fictional student portfolio sample with an English and Traditional Chinese language switch.",
+    "accessibility": {
+      "skipLink": "Skip to content",
+      "navigation": "Main navigation",
+      "brand": "Alex Chen portfolio home",
+      "languageSelector": "Select language",
+      "sampleNotice": "Sample content notice",
+      "heroArt": "Abstract illustration of connected ideas",
+      "interests": "Sample interests",
+      "menuOpen": "Open navigation",
+      "menuClose": "Close navigation"
+    },
+    "brandName": "ALEX CHEN",
+    "brandSuffix": "PORTFOLIO",
+    "nav": {
+      "about": "About",
+      "education": "Education & Experience",
+      "projects": "Research & Projects",
+      "contact": "Contact & Links"
+    },
+    "sampleNotice": "DEMO CONTENT — all names, education, experience, projects, and contact details on this page are fictional.",
+    "hero": {
+      "eyebrow": "SAMPLE PROFILE · SAMPLE CITY",
+      "greeting": "Hello, I’m",
+      "name": "Alex Chen.",
+      "summary": "A sample graduate student profile exploring artificial intelligence, thoughtful design, and practical technology.",
+      "workButton": "Explore sample work",
+      "aboutButton": "A little about me",
+      "meta": {
+        "englishName": { "label": "ENGLISH NAME", "value": "Alex Chen" },
+        "chineseName": { "label": "中文姓名", "value": "林安 (sample)" },
+        "studentId": { "label": "STUDENT ID", "value": "DEMO-0001" }
+      },
+      "art": {
+        "aiBadge": "AI",
+        "core": "IDEAS\nIN MOTION",
+        "build": "BUILD",
+        "caption": "LEARN · QUESTION · MAKE",
+        "scroll": "SCROLL TO EXPLORE"
+      }
+    },
+    "about": {
+      "eyebrow": "01 — ABOUT",
+      "title": "A little context\ngoes a long way.",
+      "lead": "I’m Alex, a fictional sample student interested in how intelligent systems can support learning and everyday problem-solving.",
+      "body": "This sample biography demonstrates a concise introduction, a few interests, and a clear personal voice. Replace it with your own accurate story before submitting.",
+      "interests": ["Artificial Intelligence", "Human-centered design", "Learning technology"],
+      "note": "Sample content only — replace the name, biography, and interests with your own information."
+    },
+    "education": {
+      "eyebrow": "02 — EDUCATION AND EXPERIENCE",
+      "title": "Where I’m learning\nand what I’m exploring.",
+      "entries": [
+        {
+          "date": "2024—NOW\nSAMPLE",
+          "kicker": "SAMPLE EDUCATION",
+          "title": "Example University",
+          "degree": "M.S. in Artificial Intelligence",
+          "description": "A fictional graduate program entry showing how to summarize a degree and study focus.",
+          "location": "Example City\nExample Country"
+        },
+        {
+          "date": "2025—NOW\nSAMPLE",
+          "kicker": "SAMPLE EXPERIENCE",
+          "title": "Research Assistant",
+          "degree": "Example Lab · Part-time",
+          "description": "Supported a fictional team by organizing experiment notes and preparing clear project summaries.",
+          "location": "Example Lab"
+        }
+      ],
+      "footnote": "All names, dates, institutions, and roles in this section are fictional examples."
+    },
+    "projects": {
+      "eyebrow": "03 — RESEARCH AND PROJECTS",
+      "title": "Ideas into\nsmall experiments.",
+      "aside": "Sample projects for layout demonstration.\nReplace them with your real work.",
+      "course": {
+        "label": "SAMPLE COURSE PROJECT",
+        "year": "2025",
+        "title": "Campus Route Explorer",
+        "description": "A fictional route-planning demo that compares several paths between campus locations and explains how search strategies affect the result.",
+        "tags": ["Python", "Graph search", "Visualization"],
+        "note": "Dummy project data — replace the title, description, technologies, and results.",
+        "visualCaption": "SAMPLE PROJECT VISUAL"
+      },
+      "research": {
+        "label": "SAMPLE RESEARCH PROJECT",
+        "title": "Study Companion with Generative AI",
+        "description": "A fictional example exploring how a generative AI study companion might help learners turn lecture notes into practice questions. The title, methods, and findings are dummy content.",
+        "tags": ["GenAI", "Learning support", "Sample concept"]
+      },
+      "noticeLabel": "Sample data:",
+      "notice": "both projects are fictional examples for the design draft. Replace them with your real course project and research work before submission."
+    },
+    "contact": {
+      "eyebrow": "04 — CONTACT AND LINKS",
+      "title": "Let’s connect\nand exchange ideas.",
+      "description": "Alex is happy to talk about learning technology, AI experiments, and collaborative projects.",
+      "notice": "Example contact details below are fictional and are not active links.",
+      "links": [
+        { "label": "Email", "value": "alex.chen@example.com" },
+        { "label": "GitHub", "value": "example-student" },
+        { "label": "LinkedIn", "value": "alex-chen-demo" }
+      ]
+    },
+    "footer": {
+      "brand": "ALEX CHEN · SAMPLE PORTFOLIO",
+      "backToTop": "Back to top ↑"
+    }
+  },
+  "zh-TW": {
+    "htmlLang": "zh-Hant-TW",
+    "pageTitle": "Alex Chen — 個人作品集",
+    "metaDescription": "虛構學生作品集範例，提供英文與繁體中文切換。",
+    "accessibility": {
+      "skipLink": "跳至主要內容",
+      "navigation": "主要導覽",
+      "brand": "Alex Chen 個人作品集首頁",
+      "languageSelector": "選擇語言",
+      "sampleNotice": "示範資料說明",
+      "heroArt": "呈現想法連結的抽象插圖",
+      "interests": "示範興趣",
+      "menuOpen": "開啟導覽",
+      "menuClose": "關閉導覽"
+    },
+    "brandName": "ALEX CHEN",
+    "brandSuffix": "個人作品集",
+    "nav": {
+      "about": "關於我",
+      "education": "學歷與經歷",
+      "projects": "研究與專案",
+      "contact": "聯絡方式與連結"
+    },
+    "sampleNotice": "示範資料 — 本頁的姓名、學歷、經歷、專案與聯絡資料皆為虛構。",
+    "hero": {
+      "eyebrow": "示範個人檔案 · 範例城市",
+      "greeting": "你好，我是",
+      "name": "Alex Chen。",
+      "summary": "這是一份虛構的研究生個人檔案範例，介紹人工智慧、以人為本的設計與實用科技。",
+      "workButton": "查看示範作品",
+      "aboutButton": "認識我",
+      "meta": {
+        "englishName": { "label": "英文姓名", "value": "Alex Chen" },
+        "chineseName": { "label": "中文姓名", "value": "林安（範例）" },
+        "studentId": { "label": "學號", "value": "DEMO-0001" }
+      },
+      "art": {
+        "aiBadge": "AI",
+        "core": "想法\n持續前進",
+        "build": "創作",
+        "caption": "學習 · 提問 · 實作",
+        "scroll": "向下探索"
+      }
+    },
+    "about": {
+      "eyebrow": "01 — 關於我",
+      "title": "多一點背景，\n更容易認識我。",
+      "lead": "我是 Alex，這份虛構的學生範例介紹我對智慧系統如何協助學習與日常解決問題的興趣。",
+      "body": "這段示範自我介紹呈現精簡的個人背景、興趣與清楚的表達方式。提交前，請替換成符合你自身經歷的內容。",
+      "interests": ["人工智慧", "以人為本的設計", "學習科技"],
+      "note": "以上皆為示範內容 — 請換成你自己的姓名、自我介紹與興趣。"
+    },
+    "education": {
+      "eyebrow": "02 — 學歷與經歷",
+      "title": "在這裡學習，\n也在這裡探索。",
+      "entries": [
+        {
+          "date": "2024—至今\n範例資料",
+          "kicker": "示範學歷",
+          "title": "範例大學",
+          "degree": "人工智慧碩士",
+          "description": "虛構的研究所學歷範例，示範如何簡要介紹學位與學習方向。",
+          "location": "範例城市\n範例國家"
+        },
+        {
+          "date": "2025—至今\n範例資料",
+          "kicker": "示範經歷",
+          "title": "研究助理",
+          "degree": "範例實驗室 · 兼職",
+          "description": "協助虛構團隊整理實驗紀錄，並撰寫清楚易讀的專案摘要。",
+          "location": "範例實驗室"
+        }
+      ],
+      "footnote": "本區姓名、日期、機構與職務皆為虛構範例。"
+    },
+    "projects": {
+      "eyebrow": "03 — 研究與專案",
+      "title": "把想法化為\n小型實驗。",
+      "aside": "以下是用於展示版面的示範專案。\n請替換成你自己的作品。",
+      "course": {
+        "label": "示範課程專案",
+        "year": "2025",
+        "title": "校園路徑探索器",
+        "description": "虛構的路徑規劃示範，比較校園地點之間的不同路線，並說明搜尋策略如何影響結果。",
+        "tags": ["Python", "圖搜尋", "視覺化"],
+        "note": "虛構專案資料 — 請替換標題、說明、技術與成果。",
+        "visualCaption": "示範專案插圖"
+      },
+      "research": {
+        "label": "示範研究專案",
+        "title": "生成式 AI 學習夥伴",
+        "description": "虛構的研究範例，探討生成式 AI 學習夥伴如何協助學習者將課堂筆記轉化為練習題。標題、方法與研究結果皆為虛構內容。",
+        "tags": ["生成式 AI", "學習輔助", "概念範例"]
+      },
+      "noticeLabel": "示範資料：",
+      "notice": "兩項專案皆為版面展示用的虛構範例。提交前請換成你實際完成的課程專案與研究成果。"
+    },
+    "contact": {
+      "eyebrow": "04 — 聯絡方式與連結",
+      "title": "保持聯繫，\n交流想法。",
+      "description": "Alex 樂於交流學習科技、人工智慧實驗與合作專案。",
+      "notice": "以下聯絡資訊皆為虛構範例，無法實際使用。",
+      "links": [
+        { "label": "電子郵件", "value": "alex.chen@example.com" },
+        { "label": "GitHub", "value": "example-student" },
+        { "label": "LinkedIn", "value": "alex-chen-demo" }
+      ]
+    },
+    "footer": {
+      "brand": "ALEX CHEN · 示範作品集",
+      "backToTop": "回到頁首 ↑"
+    }
+  }
+}

@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#6750a4">
+  <meta id="meta-description" name="description" content="">
+  <title></title>
+  <link rel="stylesheet" href="styles.css?v=1">
+  <link rel="stylesheet" href="material.css?v=3">
+  <link rel="stylesheet" href="language.css?v=6">
+  <script src="main.js?v=7" defer></script>
+</head>
+<body>
+  <a class="skip-link" id="skip-link" href="#main"></a>
+  <header class="site-header">
+    <a class="wordmark" href="#top" aria-label=""><span class="wordmark-mark">A</span><span class="brand-name" id="brand-name"></span><span class="brand-separator" id="brand-separator"></span><span class="brand-suffix" id="brand-suffix"></span></a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="">
+      <span></span><span></span>
+    </button>
+    <nav id="primary-nav" class="nav-links" aria-label="">
+      <a href="#about" id="nav-about"></a>
+      <a href="#education" id="nav-education"></a>
+      <a href="#projects" id="nav-projects"></a>
+      <a class="nav-contact" href="#contact"><span id="nav-contact"></span> <span aria-hidden="true">↗</span></a>
+    </nav>
+    <div class="language-switch" id="language-switch" role="group" aria-label="">
+      <button class="language-option is-active" id="language-en" type="button" lang="en" aria-pressed="true">EN</button>
+      <button class="language-option" id="language-zh" type="button" lang="zh-TW" aria-pressed="false">繁中</button>
+    </div>
+  </header>
+  <aside class="sample-banner" id="sample-banner" aria-label=""><span class="material-glyph" aria-hidden="true">i</span><span id="sample-notice"></span></aside>
+
+  <main id="main">
+    <section class="hero section-wrap" id="top" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="status-dot"></span> <span id="hero-eyebrow"></span></p>
+        <h1 id="hero-title"><span id="hero-greeting"></span><br><span id="hero-name"></span></h1>
+        <p class="hero-intro" id="hero-summary"></p>
+        <div class="hero-actions">
+          <a class="button button-dark" href="#projects"><span id="hero-work-button"></span> <span aria-hidden="true">↓</span></a>
+          <a class="text-link" href="#about"><span id="hero-about-button"></span> <span aria-hidden="true">↗</span></a>
+        </div>
+        <div class="hero-meta"><span><span id="meta-english-label"></span> <b id="meta-english-value"></b></span><span><span id="meta-chinese-label"></span> <b id="meta-chinese-value"></b></span><span><span id="meta-id-label"></span> <b id="meta-id-value"></b></span></div>
+      </div>
+      <div class="hero-art" id="hero-art" aria-label="" role="img">
+        <div class="art-grid"></div>
+        <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+        <div class="art-core"><span class="core-spark">✳</span><span class="art-copy" id="art-core-text"></span></div>
+        <div class="orbit-label label-ai"><span id="art-ai"></span> <i></i></div>
+        <div class="orbit-label label-build"><i></i> <span id="art-build"></span></div>
+        <div class="art-caption" id="art-caption"></div>
+        <span class="art-index">01 / 04</span>
+      </div>
+      <a class="scroll-note" href="#about"><span></span> <span id="scroll-note-text"></span></a>
+    </section>
+
+    <section class="content-section about-section" id="about" aria-labelledby="about-title">
+      <div class="section-wrap two-column">
+        <div class="section-heading"><p class="eyebrow" id="about-eyebrow"></p><h2 class="localized-heading" id="about-title"></h2></div>
+        <div class="section-body">
+          <p class="lead" id="about-lead"></p>
+          <p id="about-body"></p>
+          <div class="interest-list" id="interest-list" aria-label=""></div>
+          <p class="edit-note"><span aria-hidden="true">✳</span> <span id="about-note"></span></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-section education-section" id="education" aria-labelledby="education-title">
+      <div class="section-wrap">
+        <div class="section-heading section-heading-wide"><p class="eyebrow" id="education-eyebrow"></p><h2 class="localized-heading" id="education-title"></h2></div>
+        <div class="education-entries" id="education-entries"></div>
+        <p class="section-footnote" id="education-footnote"></p>
+      </div>
+    </section>
+
+    <section class="content-section projects-section" id="projects" aria-labelledby="projects-title">
+      <div class="section-wrap">
+        <div class="projects-heading"><div class="section-heading"><p class="eyebrow" id="projects-eyebrow"></p><h2 class="localized-heading" id="projects-title"></h2></div><p class="projects-aside localized-lines" id="projects-aside"></p></div>
+        <article class="project-card featured-project">
+          <div class="project-visual maze-visual" aria-hidden="true"><div class="maze-lines"></div><span class="maze-point point-start">S</span><span class="maze-point point-a">A</span><span class="maze-point point-b">B</span><span class="maze-point point-c">C</span><span class="maze-path"></span><span class="visual-caption" id="course-visual-caption"></span></div>
+          <div class="project-info"><div class="project-topline"><span id="course-label"></span><span id="course-year"></span></div><h3 id="course-title"></h3><p id="course-description"></p><div class="project-tags" id="course-tags"></div><p class="project-footnote" id="course-note"></p></div>
+          <span class="project-number">01</span>
+        </article>
+        <article class="project-card research-card">
+          <div class="research-icon" aria-hidden="true"><span>✳</span><span>02</span></div>
+          <div class="research-copy"><p class="project-topline" id="research-label"></p><h3 id="research-title"></h3><p id="research-description"></p><div class="project-tags" id="research-tags"></div></div>
+          <span class="research-arrow" aria-hidden="true">↗</span>
+        </article>
+        <p class="research-warning"><strong id="projects-notice-label"></strong> <span id="projects-notice"></span></p>
+      </div>
+    </section>
+
+    <section class="contact-section" id="contact" aria-labelledby="contact-title">
+      <div class="section-wrap contact-inner"><p class="eyebrow" id="contact-eyebrow"></p><div class="contact-row"><h2 class="localized-heading" id="contact-title"></h2><div class="contact-detail"><p id="contact-description"></p><p class="needs-input" id="contact-notice"></p><div class="contact-links" id="contact-links"></div></div></div><div class="contact-bottom"><span id="footer-brand"></span><a href="#top" id="back-to-top"></a><span>© <span id="year"></span></span></div></div>
+    </section>
+  </main>
+</body>
+</html>
