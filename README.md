@@ -34,9 +34,3 @@ The included workflow uploads `public/` and deploys it whenever code is pushed t
 3. Push to `main` or run **Deploy static site to GitHub Pages** manually, then check the workflow run for the published URL.
 
 The expected project-site URL is `https://<owner>.github.io/<repository>/`. If the repository's default branch is not `main`, change the workflow's push branch filter. GitHub Pages serves static files only: `server.js` remains for local development and is not deployed. The workflow publishes `public/`, and its relative asset paths support the repository subpath.
-
-## Before submitting
-
-The current local draft includes the user-confirmed 2018–2022 bachelor's study in Palembang and 2026-onward CGU Artificial Intelligence master's study, plus expanded CV-based project details. It contains the explicitly approved university email and verified LinkedIn/GitHub profiles. The student ID appears in the About section; no phone number is displayed.
-
-The skin-lesion project is titled “A Comparative Study of Adam and SGD Optimizers for InceptionV3-Based Skin Lesion Classification” and cites the HAM10000 dataset paper (Tschandl et al., 2018; DOI 10.1038/sdata.2018.161). The available manuscript is incomplete and the notebook does not document the optimizer comparison, so the portfolio makes no performance claim. The separate 2022 cataract-classifier project was removed; selected Andal and PLN projects from the CV were added with concise descriptions. The portfolio is deployed from `public/` with GitHub Pages. The reflection PDF and submission ZIP have not been created, so the project is not yet submission-ready.
