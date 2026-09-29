@@ -111,7 +111,7 @@ const renderContactLinks = (links) => {
   container.replaceChildren(fragment);
 };
 
-const renderProjectCards = (projects) => {
+const renderProjectCards = (projects, detailsLabel) => {
   const container = document.getElementById("project-list");
   if (!container) return;
   const fragment = document.createDocumentFragment();
@@ -119,6 +119,11 @@ const renderProjectCards = (projects) => {
   projects.forEach((project, index) => {
     const card = document.createElement("article");
     card.className = "project-card research-card";
+
+    const disclosure = document.createElement("details");
+    disclosure.className = "project-disclosure";
+    const summary = document.createElement("summary");
+    summary.className = "project-summary";
 
     const icon = document.createElement("div");
     icon.className = "research-icon";
@@ -145,7 +150,27 @@ const renderProjectCards = (projects) => {
       tag.textContent = tagText;
       tags.appendChild(tag);
     });
-    copy.append(label, title, description, tags);
+    const expandLabel = document.createElement("span");
+    expandLabel.className = "project-expand-label";
+    expandLabel.textContent = detailsLabel;
+    copy.append(label, title, description, tags, expandLabel);
+    summary.append(icon, copy);
+
+    const detailPanel = document.createElement("div");
+    detailPanel.className = "project-details";
+    const detailText = document.createElement("p");
+    detailText.textContent = project.details;
+    detailPanel.appendChild(detailText);
+    if (project.detailsNote) {
+      const note = document.createElement("p");
+      note.className = "project-details-note";
+      note.textContent = project.detailsNote;
+      detailPanel.appendChild(note);
+    }
+    disclosure.append(summary, detailPanel);
+    card.appendChild(disclosure);
+
+    const links = [];
     if (project.citationHref && project.citationText) {
       const citation = document.createElement("a");
       citation.className = "project-citation";
@@ -153,19 +178,23 @@ const renderProjectCards = (projects) => {
       citation.textContent = project.citationText;
       citation.target = "_blank";
       citation.rel = "noopener noreferrer";
-      copy.appendChild(citation);
+      links.push(citation);
     }
-    if (project.storeLink && project.storeLink.href && project.storeLink.text) {
-      const storeLink = document.createElement("a");
-      storeLink.className = "project-store-link";
-      storeLink.href = project.storeLink.href;
-      storeLink.textContent = project.storeLink.text;
-      storeLink.target = "_blank";
-      storeLink.rel = "noopener noreferrer";
-      copy.appendChild(storeLink);
+    [project.storeLink, project.appStoreLink].filter((storeLink) => storeLink && storeLink.href && storeLink.text).forEach((storeLink) => {
+      const storeAnchor = document.createElement("a");
+      storeAnchor.className = "project-store-link";
+      storeAnchor.href = storeLink.href;
+      storeAnchor.textContent = storeLink.text;
+      storeAnchor.target = "_blank";
+      storeAnchor.rel = "noopener noreferrer";
+      links.push(storeAnchor);
+    });
+    if (links.length) {
+      const linkGroup = document.createElement("div");
+      linkGroup.className = "project-links";
+      linkGroup.append(...links);
+      card.appendChild(linkGroup);
     }
-
-    card.append(icon, copy);
     fragment.appendChild(card);
   });
 
@@ -235,7 +264,7 @@ const applyLanguage = (language) => {
   setText("projects-eyebrow", data.projects.eyebrow);
   setText("projects-title", data.projects.title);
   setText("projects-aside", data.projects.aside);
-  renderProjectCards(data.projects.items);
+  renderProjectCards(data.projects.items, data.projects.detailsLabel);
 
   setText("contact-eyebrow", data.contact.eyebrow);
   setText("contact-title", data.contact.title);

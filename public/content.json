@@ -83,7 +83,7 @@
         {
           "date": "2018 — 2022",
           "kicker": "BACHELOR'S DEGREE",
-          "title": "Universitas Multi Data Palembang",
+          "title": "Universitas Multi Data Palembang · Department of Informatics",
           "degree": "Bachelor of Computer Science",
           "description": "Completed a Bachelor of Computer Science degree.",
           "location": "Palembang, Indonesia"
@@ -109,7 +109,7 @@
           "kicker": "INTERNSHIP",
           "role": "Full Stack Developer",
           "company": "PLN UPDL Palembang",
-          "description": "Built a permit-management app with two user roles using Flutter, Laravel REST API, and MySQL; added digital-signature validation. My CV reports a 50% improvement in approval workflows after adoption.",
+          "description": "Built a permit-management app with two user roles using Flutter, Laravel REST API, and MySQL; added digital-signature validation, resulting in a 50% improvement in approval workflow efficiency after adoption.",
           "location": ""
         }
       ]
@@ -122,7 +122,7 @@
         {
           "label": "PYTHON · SKIN CLASSIFICATION · 2021",
           "title": "Skin Disease Classification Using Convolutional Neural Network",
-          "description": "I worked on an InceptionV3-based skin-lesion classification project using HAM10000.",
+          "description": "The study used an 85:15 train/test split and applied augmentation to training images in the latter two setups.",
           "tags": [
             "Python",
             "InceptionV3",
@@ -130,7 +130,8 @@
             "Adam vs. SGD"
           ],
           "citationText": "Dataset reference: Tschandl et al. (2018), Scientific Data 5:180161",
-          "citationHref": "https://doi.org/10.1038/sdata.2018.161"
+          "citationHref": "https://doi.org/10.1038/sdata.2018.161",
+          "details": "I compared three training setups for an InceptionV3 five-class skin-lesion classifier using 8,964 HAM10000 images: Adam without augmentation, Adam with augmentation, and SGD with augmentation."
         },
         {
           "label": "PROFESSIONAL MOBILE APP",
@@ -145,6 +146,11 @@
           "storeLink": {
             "text": "Google Play Store ↗",
             "href": "https://play.google.com/store/apps/details?id=com.andalsoftware.andalconnect"
+          },
+          "details": "Reworked 60+ Flutter HRIS pages using Clean Architecture. Added Google Maps clock-in/out, silent push notifications, app-version controls, multi-server testing, and unit tests. Rebuilt Codemagic CI/CD; the CV reports a 60% reduction in pipeline runtime.",
+          "appStoreLink": {
+            "text": "App Store ↗",
+            "href": "https://apps.apple.com/us/app/andal-connect/id1601168793"
           }
         },
         {
@@ -156,7 +162,8 @@
             "WebSocket",
             "GraphQL",
             "Sentry"
-          ]
+          ],
+          "details": "Built the Flutter Desktop app from scratch to connect client fingerprint attendance devices to Andal services. Designed the flow across the device, desktop app, and services using WebSocket and GraphQL; built CI/CD and added Sentry error reporting."
         },
         {
           "label": "PROFESSIONAL HRIS APP",
@@ -166,9 +173,11 @@
             "Flutter",
             "HRIS",
             "Firebase Crashlytics"
-          ]
+          ],
+          "details": "Developed and maintained a Flutter HRIS app serving about 20,000 users. Added Firebase Crashlytics and a transaction-revision feature that lets users edit transactions."
         }
-      ]
+      ],
+      "detailsLabel": "View project details"
     },
     "contact": {
       "eyebrow": "04 — CONTACT AND LINKS",
@@ -285,7 +294,7 @@
         {
           "date": "2018 — 2022",
           "kicker": "學士學位",
-          "title": "Universitas Multi Data Palembang",
+          "title": "Universitas Multi Data Palembang · 資訊學系",
           "degree": "電腦科學學士",
           "description": "於 2018 至 2022 年就讀並取得電腦科學學士學位。",
           "location": "印尼巨港（Palembang）"
@@ -311,7 +320,7 @@
           "kicker": "實習",
           "role": "全端開發人員",
           "company": "PLN UPDL Palembang",
-          "description": "使用 Flutter、Laravel REST API 與 MySQL 建置支援兩種使用者角色的許可申請系統，並加入電子簽章驗證。履歷記載系統採用後，申請審核流程效率提升 50%。",
+          "description": "使用 Flutter、Laravel REST API 與 MySQL 建置支援兩種使用者角色的許可申請系統，並加入電子簽章驗證；系統上線後，申請審核流程效率提升 50%。",
           "location": ""
         }
       ]
@@ -324,7 +333,7 @@
         {
           "label": "PYTHON · 皮膚病灶分類 · 2021",
           "title": "使用卷積神經網路進行皮膚疾病分類",
-          "description": "我參與了使用 InceptionV3 與 HAM10000 進行皮膚病灶分類的專案。",
+          "description": "研究以 85:15 比例切分訓練與測試資料，並對後兩種設定的訓練影像進行資料增強。",
           "tags": [
             "Python",
             "InceptionV3",
@@ -332,7 +341,8 @@
             "Adam vs. SGD"
           ],
           "citationText": "資料集文獻：Tschandl 等人（2018），Scientific Data 5:180161",
-          "citationHref": "https://doi.org/10.1038/sdata.2018.161"
+          "citationHref": "https://doi.org/10.1038/sdata.2018.161",
+          "details": "我使用 8,964 張 HAM10000 影像，為 InceptionV3 五類皮膚病灶分類比較三種訓練設定：Adam 無資料增強、Adam 有資料增強，以及 SGD 有資料增強。"
         },
         {
           "label": "專業行動應用程式",
@@ -347,6 +357,11 @@
           "storeLink": {
             "text": "Google Play 商店 ↗",
             "href": "https://play.google.com/store/apps/details?id=com.andalsoftware.andalconnect"
+          },
+          "details": "以 Flutter 和 Clean Architecture 改寫超過 60 個人資應用頁面。新增 Google Maps 上下班打卡、靜默推播、最低版本控管、多伺服器測試選擇與單元測試。重建 Codemagic CI/CD 流程；履歷記載建置時間縮短 60%。",
+          "appStoreLink": {
+            "text": "App Store ↗",
+            "href": "https://apps.apple.com/us/app/andal-connect/id1601168793"
           }
         },
         {
@@ -358,7 +373,8 @@
             "WebSocket",
             "GraphQL",
             "Sentry"
-          ]
+          ],
+          "details": "從零開始建立 Flutter Desktop 應用程式，連接客戶端指紋出勤設備與 Andal 服務。設計設備、桌面應用與服務端的流程，使用 WebSocket 與 GraphQL，並建立 CI/CD 及 Sentry 錯誤回報。"
         },
         {
           "label": "專業人資系統應用程式",
@@ -368,9 +384,11 @@
             "Flutter",
             "HRIS",
             "Firebase Crashlytics"
-          ]
+          ],
+          "details": "開發並維護約有 2 萬名使用者的 Flutter 人資應用程式。加入 Firebase Crashlytics，並新增交易修訂功能，讓使用者可以修改交易資料。"
         }
-      ]
+      ],
+      "detailsLabel": "查看專案詳情"
     },
     "contact": {
       "eyebrow": "04 — 聯絡方式與連結",
