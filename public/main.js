@@ -111,28 +111,42 @@ const renderContactLinks = (links) => {
   container.replaceChildren(fragment);
 };
 
-const renderProjectCards = (projects, detailsLabel) => {
+const projectVisuals = {
+  network: '<svg class="pv-svg" viewBox="0 0 140 100" aria-hidden="true" focusable="false"><g class="pv-links"><path d="M28 22 70 20M28 22 70 44M28 22 70 62M28 48 70 20M28 48 70 44M28 48 70 62M28 48 70 80M28 74 70 62M28 74 70 80M70 20 112 38M70 44 112 38M70 44 112 58M70 62 112 58M70 80 112 58"/></g><g class="pv-nodes"><circle cx="28" cy="22" r="6"/><circle cx="28" cy="48" r="6"/><circle cx="28" cy="74" r="6"/><circle cx="70" cy="20" r="6"/><circle cx="70" cy="44" r="6"/><circle cx="70" cy="62" r="6"/><circle cx="70" cy="80" r="6"/><circle class="pv-node-accent" cx="112" cy="38" r="7"/><circle cx="112" cy="58" r="6"/></g></svg>',
+  phone: '<svg class="pv-svg" viewBox="0 0 140 100" aria-hidden="true" focusable="false"><g class="pv-device"><rect x="52" y="10" width="36" height="80" rx="8"/><line x1="64" y1="16" x2="76" y2="16"/><circle cx="70" cy="84" r="2"/></g><g class="pv-pin"><circle class="pv-node-accent" cx="70" cy="46" r="6"/><path d="M70 52v10"/><path class="pv-arc" d="M56 62a18 18 0 0 1 28 0"/><path class="pv-arc" d="M48 68a26 26 0 0 1 44 0"/></g></svg>',
+  desktop: '<svg class="pv-svg" viewBox="0 0 140 100" aria-hidden="true" focusable="false"><g class="pv-device"><rect x="18" y="16" width="104" height="68" rx="8"/><line x1="18" y1="32" x2="122" y2="32"/><circle cx="26" cy="24" r="2.4"/><circle cx="34" cy="24" r="2.4"/><circle cx="42" cy="24" r="2.4"/></g><g class="pv-pin"><path class="pv-arc" d="M70 62c0-6 5-10 10-10s10 4 10 10"/><path class="pv-arc" d="M70 62c0-12 9-20 20-20s20 8 20 20"/><circle class="pv-node-accent" cx="90" cy="62" r="3.5"/></g></svg>',
+  dashboard: '<svg class="pv-svg" viewBox="0 0 140 100" aria-hidden="true" focusable="false"><g class="pv-bars"><rect x="30" y="58" width="14" height="24" rx="3"/><rect x="52" y="44" width="14" height="38" rx="3"/><rect class="pv-node-accent" x="74" y="30" width="14" height="52" rx="3"/><rect x="96" y="50" width="14" height="32" rx="3"/></g><g class="pv-dots"><circle cx="37" cy="26" r="4"/><circle cx="59" cy="22" r="4"/><circle cx="81" cy="18" r="4"/><circle cx="103" cy="24" r="4"/></g></svg>'
+};
+
+const buildProjectVisual = (project, index) => {
+  const panel = document.createElement("div");
+  panel.className = `project-visual-panel pv-${project.visual || "network"}`;
+  panel.setAttribute("aria-hidden", "true");
+  const markup = projectVisuals[project.visual];
+  if (markup) panel.innerHTML = markup;
+  return panel;
+};
+
+const renderProjectCards = (projects, labels) => {
   const container = document.getElementById("project-list");
   if (!container) return;
   const fragment = document.createDocumentFragment();
+  const ordered = projects.some((project) => project.featured)
+    ? [...projects].sort((a, b) => Number(b.featured || false) - Number(a.featured || false))
+    : projects;
 
-  projects.forEach((project, index) => {
+  ordered.forEach((project, index) => {
     const card = document.createElement("article");
-    card.className = "project-card research-card";
+    card.className = project.featured
+      ? "project-card research-card project-card--featured"
+      : "project-card research-card";
 
     const disclosure = document.createElement("details");
     disclosure.className = "project-disclosure";
     const summary = document.createElement("summary");
     summary.className = "project-summary";
 
-    const icon = document.createElement("div");
-    icon.className = "research-icon";
-    icon.setAttribute("aria-hidden", "true");
-    const symbol = document.createElement("span");
-    symbol.textContent = "✳";
-    const number = document.createElement("span");
-    number.textContent = String(index + 1).padStart(2, "0");
-    icon.append(symbol, number);
+    summary.appendChild(buildProjectVisual(project, index));
 
     const copy = document.createElement("div");
     copy.className = "research-copy";
@@ -150,11 +164,21 @@ const renderProjectCards = (projects, detailsLabel) => {
       tag.textContent = tagText;
       tags.appendChild(tag);
     });
+    if (project.outcome) {
+      const outcome = document.createElement("p");
+      outcome.className = "project-outcome";
+      const outcomeLabel = document.createElement("strong");
+      outcomeLabel.textContent = labels.outcomeLabel;
+      const outcomeText = document.createElement("span");
+      outcomeText.textContent = project.outcome;
+      outcome.append(outcomeLabel, outcomeText);
+      copy.appendChild(outcome);
+    }
     const expandLabel = document.createElement("span");
     expandLabel.className = "project-expand-label";
-    expandLabel.textContent = detailsLabel;
+    expandLabel.textContent = labels.details;
     copy.append(label, title, description, tags, expandLabel);
-    summary.append(icon, copy);
+    summary.append(copy);
 
     const detailPanel = document.createElement("div");
     detailPanel.className = "project-details";
@@ -168,6 +192,9 @@ const renderProjectCards = (projects, detailsLabel) => {
       detailPanel.appendChild(note);
     }
     disclosure.append(summary, detailPanel);
+    disclosure.addEventListener("toggle", () => {
+      expandLabel.textContent = disclosure.open ? labels.hide : labels.details;
+    });
     card.appendChild(disclosure);
 
     const links = [];
@@ -264,7 +291,11 @@ const applyLanguage = (language) => {
   setText("projects-eyebrow", data.projects.eyebrow);
   setText("projects-title", data.projects.title);
   setText("projects-aside", data.projects.aside);
-  renderProjectCards(data.projects.items, data.projects.detailsLabel);
+  renderProjectCards(data.projects.items, {
+    details: data.projects.detailsLabel,
+    hide: data.projects.hideDetailsLabel,
+    outcome: data.projects.outcomeLabel
+  });
 
   setText("contact-eyebrow", data.contact.eyebrow);
   setText("contact-title", data.contact.title);
@@ -288,19 +319,42 @@ const applyLanguage = (language) => {
 document.getElementById("language-en").addEventListener("click", () => applyLanguage("en"));
 document.getElementById("language-zh").addEventListener("click", () => applyLanguage("zh-TW"));
 
-fetch("content.json", { cache: "no-store" })
-  .then((response) => {
-    if (!response.ok) throw new Error(`Could not load content.json (${response.status})`);
-    return response.json();
-  })
-  .then((data) => {
-    translations = data;
-    let preferredLanguage = "en";
-    try {
-      preferredLanguage = localStorage.getItem("portfolio-language") || "en";
-    } catch {
-      // English is the default when storage is unavailable.
-    }
-    applyLanguage(preferredLanguage);
-  })
-  .catch((error) => console.error("Portfolio content failed to load:", error));
+const showLoadFallback = () => {
+  if (document.querySelector(".load-fallback")) return;
+  const banner = document.createElement("div");
+  banner.className = "load-fallback";
+  banner.setAttribute("role", "alert");
+  const message = document.createElement("p");
+  message.textContent = "Page content couldn’t load. Check your connection and retry. · 網頁內容載入失敗，請檢查網路後重試。";
+  const retry = document.createElement("button");
+  retry.type = "button";
+  retry.textContent = "Retry · 重試";
+  retry.addEventListener("click", () => {
+    banner.remove();
+    loadContent();
+  });
+  banner.append(message, retry);
+  document.getElementById("main").prepend(banner);
+};
+
+const loadContent = () => {
+  fetch("content.json", { cache: "no-store" })
+    .then((response) => {
+      if (!response.ok) throw new Error(`Could not load content.json (${response.status})`);
+      return response.json();
+    })
+    .then((data) => {
+      translations = data;
+      document.querySelector(".load-fallback")?.remove();
+      let preferredLanguage = "en";
+      try {
+        preferredLanguage = localStorage.getItem("portfolio-language") || "en";
+      } catch {
+        // English is the default when storage is unavailable.
+      }
+      applyLanguage(preferredLanguage);
+    })
+    .catch(showLoadFallback);
+};
+
+loadContent();
