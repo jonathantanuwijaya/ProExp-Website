@@ -3,3 +3,4 @@ server.log
 *.log
 .env
 .DS_Store
+/PROMPTS_AND_RESPONSES.md

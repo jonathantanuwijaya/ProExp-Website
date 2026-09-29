@@ -1,227 +1,405 @@
 {
   "en": {
     "htmlLang": "en",
-    "pageTitle": "Alex Chen — Personal Portfolio",
-    "metaDescription": "Fictional student portfolio sample with an English and Traditional Chinese language switch.",
+    "pageTitle": "Jonathan Tanuwijaya",
+    "metaDescription": "Software developer focused on mobile apps, workplace systems, backend services, and applied machine learning.",
     "accessibility": {
       "skipLink": "Skip to content",
       "navigation": "Main navigation",
-      "brand": "Alex Chen portfolio home",
+      "brand": "Jonathan Tanuwijaya home",
       "languageSelector": "Select language",
-      "sampleNotice": "Sample content notice",
-      "heroArt": "Abstract illustration of connected ideas",
-      "interests": "Sample interests",
+      "heroArt": "Abstract neural-network illustration",
+      "interests": "Professional skills and focus areas",
       "menuOpen": "Open navigation",
       "menuClose": "Close navigation"
     },
-    "brandName": "ALEX CHEN",
-    "brandSuffix": "PORTFOLIO",
+    "brandName": "JONATHAN TANUWIJAYA",
     "nav": {
       "about": "About",
-      "education": "Education & Experience",
+      "experience": "Experience",
       "projects": "Research & Projects",
       "contact": "Contact & Links"
     },
-    "sampleNotice": "DEMO CONTENT — all names, education, experience, projects, and contact details on this page are fictional.",
     "hero": {
-      "eyebrow": "SAMPLE PROFILE · SAMPLE CITY",
+      "eyebrow": "SOFTWARE ENGINEERING · APPLIED MACHINE LEARNING",
       "greeting": "Hello, I’m",
-      "name": "Alex Chen.",
-      "summary": "A sample graduate student profile exploring artificial intelligence, thoughtful design, and practical technology.",
-      "workButton": "Explore sample work",
-      "aboutButton": "A little about me",
+      "name": "Jonathan Tanuwijaya.",
+      "mandarinName": "Chinese name: 陳曉鴻",
+      "summary": "Software developer and current CGU AI master's student, with experience building Flutter apps, workplace systems, and backend services.",
+      "workButton": "Explore selected work",
+      "aboutButton": "More about my work",
       "meta": {
-        "englishName": { "label": "ENGLISH NAME", "value": "Alex Chen" },
-        "chineseName": { "label": "中文姓名", "value": "林安 (sample)" },
-        "studentId": { "label": "STUDENT ID", "value": "DEMO-0001" }
+        "role": {
+          "label": "ROLE",
+          "value": "Software developer"
+        },
+        "degree": {
+          "label": "CURRENT STUDY",
+          "value": "M.S. in Artificial Intelligence · CGU"
+        },
+        "stack": {
+          "label": "CORE STACK",
+          "value": "Python · Flutter · Dart · Kotlin"
+        }
       },
       "art": {
-        "aiBadge": "AI",
-        "core": "IDEAS\nIN MOTION",
-        "build": "BUILD",
-        "caption": "LEARN · QUESTION · MAKE",
+        "aiBadge": "ML",
+        "core": "BUILD\nWITH CARE",
+        "build": "SHIP",
+        "caption": "APPS · SYSTEMS · MODELS",
         "scroll": "SCROLL TO EXPLORE"
       }
     },
     "about": {
       "eyebrow": "01 — ABOUT",
-      "title": "A little context\ngoes a long way.",
-      "lead": "I’m Alex, a fictional sample student interested in how intelligent systems can support learning and everyday problem-solving.",
-      "body": "This sample biography demonstrates a concise introduction, a few interests, and a clear personal voice. Replace it with your own accurate story before submitting.",
-      "interests": ["Artificial Intelligence", "Human-centered design", "Learning technology"],
-      "note": "Sample content only — replace the name, biography, and interests with your own information."
+      "title": "Software built\nfor real workflows.",
+      "lead": "I build software and am currently pursuing a master's degree in Artificial Intelligence at CGU.",
+      "body": "My professional experience spans Flutter and Android products, HRIS and attendance systems, API integrations, testing, CI/CD improvements, and developer mentoring. My current focus is computer vision and machine learning, alongside maintainable architecture and dependable user workflows.",
+      "interests": [
+        "Flutter and Android",
+        "Clean Architecture and testing",
+        "Backend APIs and databases",
+        "Computer vision",
+        "Machine learning"
+      ],
+      "studentId": {
+        "label": "STUDENT ID",
+        "value": "m1561019"
+      },
+      "identity": "English name: Jonathan Tanuwijaya · 中文姓名：陳曉鴻"
     },
     "education": {
-      "eyebrow": "02 — EDUCATION AND EXPERIENCE",
-      "title": "Where I’m learning\nand what I’m exploring.",
+      "eyebrow": "EDUCATION",
+      "title": "Computer science and AI.",
       "entries": [
         {
-          "date": "2024—NOW\nSAMPLE",
-          "kicker": "SAMPLE EDUCATION",
-          "title": "Example University",
-          "degree": "M.S. in Artificial Intelligence",
-          "description": "A fictional graduate program entry showing how to summarize a degree and study focus.",
-          "location": "Example City\nExample Country"
+          "date": "2026 — PRESENT",
+          "kicker": "MASTER'S DEGREE",
+          "title": "Chang Gung University (CGU) · Department of Artificial Intelligence",
+          "degree": "Master of Science (M.S.) in Artificial Intelligence",
+          "description": "Currently pursuing the M.S. program in Artificial Intelligence.",
+          "location": "Taoyuan City, Taiwan"
         },
         {
-          "date": "2025—NOW\nSAMPLE",
-          "kicker": "SAMPLE EXPERIENCE",
-          "title": "Research Assistant",
-          "degree": "Example Lab · Part-time",
-          "description": "Supported a fictional team by organizing experiment notes and preparing clear project summaries.",
-          "location": "Example Lab"
+          "date": "2018 — 2022",
+          "kicker": "BACHELOR'S DEGREE",
+          "title": "Universitas Multi Data Palembang",
+          "degree": "Bachelor of Computer Science",
+          "description": "Completed a Bachelor of Computer Science degree.",
+          "location": "Palembang, Indonesia"
         }
-      ],
-      "footnote": "All names, dates, institutions, and roles in this section are fictional examples."
+      ]
+    },
+    "experience": {
+      "eyebrow": "02 — EXPERIENCE",
+      "title": "Experience and education.",
+      "subsectionLabel": "EXPERIENCE",
+      "subsectionTitle": "Working Experience",
+      "entries": [
+        {
+          "date": "MAR 2022 — APR 2026",
+          "kicker": "FULL-TIME",
+          "role": "Full Stack Developer",
+          "company": "Andal Software",
+          "description": "Led development of Andal Connect, Andal Linkage, and attendance apps using Flutter, Clean Architecture, and Test-Driven Development. Built reusable packages, revamped CI/CD to reduce deployment time by over 50%, and mentored developers. Implemented a multi-module app and shared dependencies across modules.",
+          "location": ""
+        },
+        {
+          "date": "MAR 2021 — JUL 2021",
+          "kicker": "INTERNSHIP",
+          "role": "Full Stack Developer",
+          "company": "PLN UPDL Palembang",
+          "description": "Built a permit-management app with two user roles using Flutter, Laravel REST API, and MySQL; added digital-signature validation. My CV reports a 50% improvement in approval workflows after adoption.",
+          "location": ""
+        }
+      ]
     },
     "projects": {
       "eyebrow": "03 — RESEARCH AND PROJECTS",
-      "title": "Ideas into\nsmall experiments.",
-      "aside": "Sample projects for layout demonstration.\nReplace them with your real work.",
-      "course": {
-        "label": "SAMPLE COURSE PROJECT",
-        "year": "2025",
-        "title": "Campus Route Explorer",
-        "description": "A fictional route-planning demo that compares several paths between campus locations and explains how search strategies affect the result.",
-        "tags": ["Python", "Graph search", "Visualization"],
-        "note": "Dummy project data — replace the title, description, technologies, and results.",
-        "visualCaption": "SAMPLE PROJECT VISUAL"
-      },
-      "research": {
-        "label": "SAMPLE RESEARCH PROJECT",
-        "title": "Study Companion with Generative AI",
-        "description": "A fictional example exploring how a generative AI study companion might help learners turn lecture notes into practice questions. The title, methods, and findings are dummy content.",
-        "tags": ["GenAI", "Learning support", "Sample concept"]
-      },
-      "noticeLabel": "Sample data:",
-      "notice": "both projects are fictional examples for the design draft. Replace them with your real course project and research work before submission."
+      "title": "Selected work,\nfrom products to models.",
+      "aside": "Flutter and Android apps, plus a computer-vision study.",
+      "items": [
+        {
+          "label": "PYTHON · SKIN CLASSIFICATION · 2021",
+          "title": "Skin Disease Classification Using Convolutional Neural Network",
+          "description": "I worked on an InceptionV3-based skin-lesion classification project using HAM10000.",
+          "tags": [
+            "Python",
+            "InceptionV3",
+            "HAM10000",
+            "Adam vs. SGD"
+          ],
+          "citationText": "Dataset reference: Tschandl et al. (2018), Scientific Data 5:180161",
+          "citationHref": "https://doi.org/10.1038/sdata.2018.161"
+        },
+        {
+          "label": "PROFESSIONAL MOBILE APP",
+          "title": "Andal Connect",
+          "description": "Flutter HRIS app for attendance and daily employee workflows. Includes map-based clock-in, silent notifications, and server selection for testing.",
+          "tags": [
+            "Flutter",
+            "HRIS",
+            "Google Maps API",
+            "Clean Architecture"
+          ],
+          "storeLink": {
+            "text": "Google Play Store ↗",
+            "href": "https://play.google.com/store/apps/details?id=com.andalsoftware.andalconnect"
+          }
+        },
+        {
+          "label": "PROFESSIONAL DESKTOP APP",
+          "title": "Andal Attendance Machine",
+          "description": "Flutter Desktop app connecting fingerprint attendance machines to Andal services with WebSocket and GraphQL. Built the CI/CD pipeline and added Sentry error reporting.",
+          "tags": [
+            "Flutter Desktop",
+            "WebSocket",
+            "GraphQL",
+            "Sentry"
+          ]
+        },
+        {
+          "label": "PROFESSIONAL HRIS APP",
+          "title": "Andal Linkage",
+          "description": "Flutter HRIS app used by about 20,000 users. Added Firebase Crashlytics and a feature for users to revise transactions.",
+          "tags": [
+            "Flutter",
+            "HRIS",
+            "Firebase Crashlytics"
+          ]
+        }
+      ]
     },
     "contact": {
       "eyebrow": "04 — CONTACT AND LINKS",
-      "title": "Let’s connect\nand exchange ideas.",
-      "description": "Alex is happy to talk about learning technology, AI experiments, and collaborative projects.",
-      "notice": "Example contact details below are fictional and are not active links.",
+      "title": "Let's connect.",
+      "description": "Reach me by email or through my professional profiles.",
+      "notice": "Email and professional profile links only.",
       "links": [
-        { "label": "Email", "value": "alex.chen@example.com" },
-        { "label": "GitHub", "value": "example-student" },
-        { "label": "LinkedIn", "value": "alex-chen-demo" }
+        {
+          "label": "LinkedIn",
+          "text": "LinkedIn profile ↗",
+          "href": "https://linkedin.com/in/jonathan-tw",
+          "external": true
+        },
+        {
+          "label": "GitHub",
+          "text": "GitHub profile ↗",
+          "href": "https://github.com/jonathantanuwijaya",
+          "external": true
+        },
+        {
+          "label": "Email",
+          "text": "m1561019@cgu.edu.tw",
+          "href": "mailto:m1561019@cgu.edu.tw",
+          "external": false
+        }
       ]
     },
     "footer": {
-      "brand": "ALEX CHEN · SAMPLE PORTFOLIO",
+      "brand": "JONATHAN TANUWIJAYA",
       "backToTop": "Back to top ↑"
     }
   },
   "zh-TW": {
     "htmlLang": "zh-Hant-TW",
-    "pageTitle": "Alex Chen — 個人作品集",
-    "metaDescription": "虛構學生作品集範例，提供英文與繁體中文切換。",
+    "pageTitle": "Jonathan Tanuwijaya",
+    "metaDescription": "軟體開發者，具備行動應用、企業系統、後端服務與應用機器學習經驗。",
     "accessibility": {
       "skipLink": "跳至主要內容",
       "navigation": "主要導覽",
-      "brand": "Alex Chen 個人作品集首頁",
+      "brand": "Jonathan Tanuwijaya 首頁",
       "languageSelector": "選擇語言",
-      "sampleNotice": "示範資料說明",
-      "heroArt": "呈現想法連結的抽象插圖",
-      "interests": "示範興趣",
+      "heroArt": "抽象神經網路插圖",
+      "interests": "專業技能與領域",
       "menuOpen": "開啟導覽",
       "menuClose": "關閉導覽"
     },
-    "brandName": "ALEX CHEN",
-    "brandSuffix": "個人作品集",
+    "brandName": "JONATHAN TANUWIJAYA",
     "nav": {
       "about": "關於我",
-      "education": "學歷與經歷",
+      "experience": "經歷",
       "projects": "研究與專案",
       "contact": "聯絡方式與連結"
     },
-    "sampleNotice": "示範資料 — 本頁的姓名、學歷、經歷、專案與聯絡資料皆為虛構。",
     "hero": {
-      "eyebrow": "示範個人檔案 · 範例城市",
+      "eyebrow": "軟體工程 · 應用機器學習",
       "greeting": "你好，我是",
-      "name": "Alex Chen。",
-      "summary": "這是一份虛構的研究生個人檔案範例，介紹人工智慧、以人為本的設計與實用科技。",
-      "workButton": "查看示範作品",
-      "aboutButton": "認識我",
+      "name": "Jonathan Tanuwijaya。",
+      "mandarinName": "中文姓名：陳曉鴻",
+      "summary": "具備 Flutter 行動應用、企業系統與後端服務開發經驗的軟體開發者。",
+      "workButton": "查看精選作品",
+      "aboutButton": "了解我的經歷",
       "meta": {
-        "englishName": { "label": "英文姓名", "value": "Alex Chen" },
-        "chineseName": { "label": "中文姓名", "value": "林安（範例）" },
-        "studentId": { "label": "學號", "value": "DEMO-0001" }
+        "role": {
+          "label": "職務",
+          "value": "軟體開發"
+        },
+        "degree": {
+          "label": "目前就讀",
+          "value": "人工智慧理學碩士 · CGU"
+        },
+        "stack": {
+          "label": "核心技術",
+          "value": "Python · Flutter · Dart · Kotlin"
+        }
       },
       "art": {
-        "aiBadge": "AI",
-        "core": "想法\n持續前進",
-        "build": "創作",
-        "caption": "學習 · 提問 · 實作",
+        "aiBadge": "ML",
+        "core": "用心\n打造軟體",
+        "build": "交付",
+        "caption": "應用程式 · 系統 · 模型",
         "scroll": "向下探索"
       }
     },
     "about": {
       "eyebrow": "01 — 關於我",
-      "title": "多一點背景，\n更容易認識我。",
-      "lead": "我是 Alex，這份虛構的學生範例介紹我對智慧系統如何協助學習與日常解決問題的興趣。",
-      "body": "這段示範自我介紹呈現精簡的個人背景、興趣與清楚的表達方式。提交前，請替換成符合你自身經歷的內容。",
-      "interests": ["人工智慧", "以人為本的設計", "學習科技"],
-      "note": "以上皆為示範內容 — 請換成你自己的姓名、自我介紹與興趣。"
+      "title": "為實際工作流程\n打造軟體。",
+      "lead": "我目前就讀 CGU 人工智慧碩士班，並持續投入軟體開發。",
+      "body": "經歷包括 Flutter 與 Android 產品、人資與出勤系統、API 整合、測試、CI/CD 改善及開發者指導。目前我更專注於電腦視覺與機器學習，同時重視可維護的架構與可靠的使用流程。",
+      "interests": [
+        "Flutter 與 Android",
+        "Clean Architecture 與測試",
+        "後端 API 與資料庫",
+        "電腦視覺",
+        "機器學習"
+      ],
+      "studentId": {
+        "label": "學號",
+        "value": "m1561019"
+      },
+      "identity": "英文姓名：Jonathan Tanuwijaya · 中文姓名：陳曉鴻"
     },
     "education": {
-      "eyebrow": "02 — 學歷與經歷",
-      "title": "在這裡學習，\n也在這裡探索。",
+      "eyebrow": "學歷",
+      "title": "電腦科學與人工智慧。",
       "entries": [
         {
-          "date": "2024—至今\n範例資料",
-          "kicker": "示範學歷",
-          "title": "範例大學",
-          "degree": "人工智慧碩士",
-          "description": "虛構的研究所學歷範例，示範如何簡要介紹學位與學習方向。",
-          "location": "範例城市\n範例國家"
+          "date": "2026 年起",
+          "kicker": "碩士學位（就讀中）",
+          "title": "長庚大學（CGU）· 人工智慧學系",
+          "degree": "人工智慧理學碩士（M.S.）",
+          "description": "目前就讀長庚大學人工智慧理學碩士課程。",
+          "location": "臺灣桃園市"
         },
         {
-          "date": "2025—至今\n範例資料",
-          "kicker": "示範經歷",
-          "title": "研究助理",
-          "degree": "範例實驗室 · 兼職",
-          "description": "協助虛構團隊整理實驗紀錄，並撰寫清楚易讀的專案摘要。",
-          "location": "範例實驗室"
+          "date": "2018 — 2022",
+          "kicker": "學士學位",
+          "title": "Universitas Multi Data Palembang",
+          "degree": "電腦科學學士",
+          "description": "於 2018 至 2022 年就讀並取得電腦科學學士學位。",
+          "location": "印尼巨港（Palembang）"
         }
-      ],
-      "footnote": "本區姓名、日期、機構與職務皆為虛構範例。"
+      ]
+    },
+    "experience": {
+      "eyebrow": "02 — 經歷",
+      "title": "經歷與學歷。",
+      "subsectionLabel": "經歷",
+      "subsectionTitle": "工作經歷",
+      "entries": [
+        {
+          "date": "2022 年 3 月 — 2026 年 4 月",
+          "kicker": "全職",
+          "role": "全端開發人員",
+          "company": "Andal Software",
+          "description": "負責 Andal Connect、Andal Linkage 與出勤應用的開發，採用 Flutter、Clean Architecture 與 TDD；建立可重用套件，改造 CI/CD 流程並將部署時間縮短逾 50%，也指導開發者。實作多模組應用程式，並在模組間共用相依套件。",
+          "location": ""
+        },
+        {
+          "date": "2021 年 3 月 — 2021 年 7 月",
+          "kicker": "實習",
+          "role": "全端開發人員",
+          "company": "PLN UPDL Palembang",
+          "description": "使用 Flutter、Laravel REST API 與 MySQL 建置支援兩種使用者角色的許可申請系統，並加入電子簽章驗證。履歷記載系統採用後，申請審核流程效率提升 50%。",
+          "location": ""
+        }
+      ]
     },
     "projects": {
       "eyebrow": "03 — 研究與專案",
-      "title": "把想法化為\n小型實驗。",
-      "aside": "以下是用於展示版面的示範專案。\n請替換成你自己的作品。",
-      "course": {
-        "label": "示範課程專案",
-        "year": "2025",
-        "title": "校園路徑探索器",
-        "description": "虛構的路徑規劃示範，比較校園地點之間的不同路線，並說明搜尋策略如何影響結果。",
-        "tags": ["Python", "圖搜尋", "視覺化"],
-        "note": "虛構專案資料 — 請替換標題、說明、技術與成果。",
-        "visualCaption": "示範專案插圖"
-      },
-      "research": {
-        "label": "示範研究專案",
-        "title": "生成式 AI 學習夥伴",
-        "description": "虛構的研究範例，探討生成式 AI 學習夥伴如何協助學習者將課堂筆記轉化為練習題。標題、方法與研究結果皆為虛構內容。",
-        "tags": ["生成式 AI", "學習輔助", "概念範例"]
-      },
-      "noticeLabel": "示範資料：",
-      "notice": "兩項專案皆為版面展示用的虛構範例。提交前請換成你實際完成的課程專案與研究成果。"
+      "title": "從產品到模型的\n精選作品。",
+      "aside": "涵蓋 Flutter 與 Android 應用及電腦視覺研究專案。",
+      "items": [
+        {
+          "label": "PYTHON · 皮膚病灶分類 · 2021",
+          "title": "使用卷積神經網路進行皮膚疾病分類",
+          "description": "我參與了使用 InceptionV3 與 HAM10000 進行皮膚病灶分類的專案。",
+          "tags": [
+            "Python",
+            "InceptionV3",
+            "HAM10000",
+            "Adam vs. SGD"
+          ],
+          "citationText": "資料集文獻：Tschandl 等人（2018），Scientific Data 5:180161",
+          "citationHref": "https://doi.org/10.1038/sdata.2018.161"
+        },
+        {
+          "label": "專業行動應用程式",
+          "title": "Andal Connect",
+          "description": "以 Flutter 開發的人資與出勤應用，支援日常員工流程。功能包含地圖打卡、靜默推播通知與供測試使用的伺服器切換。",
+          "tags": [
+            "Flutter",
+            "HRIS",
+            "Google Maps API",
+            "Clean Architecture"
+          ],
+          "storeLink": {
+            "text": "Google Play 商店 ↗",
+            "href": "https://play.google.com/store/apps/details?id=com.andalsoftware.andalconnect"
+          }
+        },
+        {
+          "label": "專業桌面應用程式",
+          "title": "Andal Attendance Machine",
+          "description": "以 Flutter Desktop 開發，透過 WebSocket 與 GraphQL 將指紋打卡設備連接至 Andal 服務。我也建立 CI/CD 流程並加入 Sentry 錯誤回報。",
+          "tags": [
+            "Flutter Desktop",
+            "WebSocket",
+            "GraphQL",
+            "Sentry"
+          ]
+        },
+        {
+          "label": "專業人資系統應用程式",
+          "title": "Andal Linkage",
+          "description": "約有 2 萬名使用者的人資應用程式。加入 Firebase Crashlytics 與交易修訂功能，讓使用者可以修改交易資料。",
+          "tags": [
+            "Flutter",
+            "HRIS",
+            "Firebase Crashlytics"
+          ]
+        }
+      ]
     },
     "contact": {
       "eyebrow": "04 — 聯絡方式與連結",
-      "title": "保持聯繫，\n交流想法。",
-      "description": "Alex 樂於交流學習科技、人工智慧實驗與合作專案。",
-      "notice": "以下聯絡資訊皆為虛構範例，無法實際使用。",
+      "title": "歡迎透過下列方式聯絡。",
+      "description": "可透過電子郵件或專業個人檔案聯絡我。",
+      "notice": "僅列出電子郵件與專業個人檔案連結。",
       "links": [
-        { "label": "電子郵件", "value": "alex.chen@example.com" },
-        { "label": "GitHub", "value": "example-student" },
-        { "label": "LinkedIn", "value": "alex-chen-demo" }
+        {
+          "label": "LinkedIn",
+          "text": "LinkedIn 個人檔案 ↗",
+          "href": "https://linkedin.com/in/jonathan-tw",
+          "external": true
+        },
+        {
+          "label": "GitHub",
+          "text": "GitHub 個人檔案 ↗",
+          "href": "https://github.com/jonathantanuwijaya",
+          "external": true
+        },
+        {
+          "label": "電子郵件",
+          "text": "m1561019@cgu.edu.tw",
+          "href": "mailto:m1561019@cgu.edu.tw",
+          "external": false
+        }
       ]
     },
     "footer": {
-      "brand": "ALEX CHEN · 示範作品集",
+      "brand": "JONATHAN TANUWIJAYA",
       "backToTop": "回到頁首 ↑"
     }
   }

@@ -45,14 +45,18 @@ const appendChips = (id, items) => {
   container.replaceChildren(fragment);
 };
 
-const renderEducation = (entries) => {
-  const container = document.getElementById("education-entries");
+const renderTimeline = (entries, containerId) => {
+  const container = document.getElementById(containerId);
   if (!container) return;
   const fragment = document.createDocumentFragment();
 
   entries.forEach((entry, index) => {
     const card = document.createElement("div");
-    card.className = index === 0 ? "timeline-card" : "timeline-card sample-experience";
+    card.className = index === 0 ? "timeline-card" : "timeline-card timeline-following";
+    const hasDate = Boolean(entry.date && entry.date.trim());
+    const hasSideNote = Boolean(entry.location && entry.location.trim());
+    if (!hasDate) card.classList.add("no-date");
+    if (!hasSideNote) card.classList.add("no-side-note");
 
     const date = document.createElement("div");
     date.className = "timeline-date";
@@ -68,19 +72,21 @@ const renderEducation = (entries) => {
     kicker.className = "card-kicker";
     kicker.textContent = entry.kicker;
     const heading = document.createElement("h3");
-    heading.textContent = entry.title;
+    heading.textContent = entry.role || entry.title;
     const degree = document.createElement("p");
     degree.className = "degree";
-    degree.textContent = entry.degree;
+    degree.textContent = entry.company || entry.degree;
     const description = document.createElement("p");
     description.textContent = entry.description;
     content.append(kicker, heading, degree, description);
 
-    const location = document.createElement("div");
-    location.className = "timeline-side";
-    location.textContent = entry.location;
-
-    card.append(date, marker, content, location);
+    card.append(date, marker, content);
+    if (hasSideNote) {
+      const location = document.createElement("div");
+      location.className = "timeline-side";
+      location.textContent = entry.location;
+      card.appendChild(location);
+    }
     fragment.appendChild(card);
   });
 
@@ -92,10 +98,77 @@ const renderContactLinks = (links) => {
   if (!container) return;
   const fragment = document.createDocumentFragment();
   links.forEach((link) => {
-    const item = document.createElement("span");
-    item.textContent = `${link.label} · ${link.value}`;
+    const item = document.createElement("a");
+    item.href = link.href;
+    item.textContent = link.text || link.label;
+    item.setAttribute("aria-label", link.label);
+    if (link.external) {
+      item.target = "_blank";
+      item.rel = "noopener noreferrer";
+    }
     fragment.appendChild(item);
   });
+  container.replaceChildren(fragment);
+};
+
+const renderProjectCards = (projects) => {
+  const container = document.getElementById("project-list");
+  if (!container) return;
+  const fragment = document.createDocumentFragment();
+
+  projects.forEach((project, index) => {
+    const card = document.createElement("article");
+    card.className = "project-card research-card";
+
+    const icon = document.createElement("div");
+    icon.className = "research-icon";
+    icon.setAttribute("aria-hidden", "true");
+    const symbol = document.createElement("span");
+    symbol.textContent = "✳";
+    const number = document.createElement("span");
+    number.textContent = String(index + 1).padStart(2, "0");
+    icon.append(symbol, number);
+
+    const copy = document.createElement("div");
+    copy.className = "research-copy";
+    const label = document.createElement("p");
+    label.className = "project-topline";
+    label.textContent = project.label;
+    const title = document.createElement("h3");
+    title.textContent = project.title;
+    const description = document.createElement("p");
+    description.textContent = project.description;
+    const tags = document.createElement("div");
+    tags.className = "project-tags";
+    project.tags.forEach((tagText) => {
+      const tag = document.createElement("span");
+      tag.textContent = tagText;
+      tags.appendChild(tag);
+    });
+    copy.append(label, title, description, tags);
+    if (project.citationHref && project.citationText) {
+      const citation = document.createElement("a");
+      citation.className = "project-citation";
+      citation.href = project.citationHref;
+      citation.textContent = project.citationText;
+      citation.target = "_blank";
+      citation.rel = "noopener noreferrer";
+      copy.appendChild(citation);
+    }
+    if (project.storeLink && project.storeLink.href && project.storeLink.text) {
+      const storeLink = document.createElement("a");
+      storeLink.className = "project-store-link";
+      storeLink.href = project.storeLink.href;
+      storeLink.textContent = project.storeLink.text;
+      storeLink.target = "_blank";
+      storeLink.rel = "noopener noreferrer";
+      copy.appendChild(storeLink);
+    }
+
+    card.append(icon, copy);
+    fragment.appendChild(card);
+  });
+
   container.replaceChildren(fragment);
 };
 
@@ -110,31 +183,30 @@ const applyLanguage = (language) => {
   setText("skip-link", data.accessibility.skipLink);
   document.querySelector(".wordmark").setAttribute("aria-label", data.accessibility.brand);
   setText("brand-name", data.brandName);
-  setText("brand-separator", " · ");
-  setText("brand-suffix", data.brandSuffix);
   document.getElementById("language-switch").setAttribute("aria-label", data.accessibility.languageSelector);
   document.getElementById("primary-nav").setAttribute("aria-label", data.accessibility.navigation);
-  document.getElementById("sample-banner").setAttribute("aria-label", data.accessibility.sampleNotice);
+
   menuButton.setAttribute("aria-label", menuLabel(menuButton.getAttribute("aria-expanded") === "true"));
 
   setText("nav-about", data.nav.about);
-  setText("nav-education", data.nav.education);
+  setText("nav-experience", data.nav.experience);
   setText("nav-projects", data.nav.projects);
   setText("nav-contact", data.nav.contact);
-  setText("sample-notice", data.sampleNotice);
+
   document.getElementById("hero-art").setAttribute("aria-label", data.accessibility.heroArt);
   setText("hero-eyebrow", data.hero.eyebrow);
   setText("hero-greeting", data.hero.greeting);
   setText("hero-name", data.hero.name);
+  setText("hero-mandarin-name", data.hero.mandarinName);
   setText("hero-summary", data.hero.summary);
   setText("hero-work-button", data.hero.workButton);
   setText("hero-about-button", data.hero.aboutButton);
-  setText("meta-english-label", data.hero.meta.englishName.label);
-  setText("meta-english-value", data.hero.meta.englishName.value);
-  setText("meta-chinese-label", data.hero.meta.chineseName.label);
-  setText("meta-chinese-value", data.hero.meta.chineseName.value);
-  setText("meta-id-label", data.hero.meta.studentId.label);
-  setText("meta-id-value", data.hero.meta.studentId.value);
+  setText("meta-role-label", data.hero.meta.role.label);
+  setText("meta-role-value", data.hero.meta.role.value);
+  setText("meta-degree-label", data.hero.meta.degree.label);
+  setText("meta-degree-value", data.hero.meta.degree.value);
+  setText("meta-stack-label", data.hero.meta.stack.label);
+  setText("meta-stack-value", data.hero.meta.stack.value);
   setText("art-ai", data.hero.art.aiBadge);
   setText("art-core-text", data.hero.art.core);
   setText("art-build", data.hero.art.build);
@@ -143,33 +215,27 @@ const applyLanguage = (language) => {
 
   setText("about-eyebrow", data.about.eyebrow);
   setText("about-title", data.about.title);
+  setText("about-identity", data.about.identity);
   setText("about-lead", data.about.lead);
   setText("about-body", data.about.body);
   document.getElementById("interest-list").setAttribute("aria-label", data.accessibility.interests);
   appendChips("interest-list", data.about.interests);
-  setText("about-note", data.about.note);
+  setText("student-id-label", data.about.studentId.label);
+  setText("student-id-value", data.about.studentId.value);
 
+  setText("experience-eyebrow", data.experience.eyebrow);
+  setText("experience-title", data.experience.title);
   setText("education-eyebrow", data.education.eyebrow);
   setText("education-title", data.education.title);
-  renderEducation(data.education.entries);
-  setText("education-footnote", data.education.footnote);
+  setText("experience-sub-eyebrow", data.experience.subsectionLabel);
+  setText("experience-subtitle", data.experience.subsectionTitle);
+  renderTimeline(data.education.entries, "education-entries");
+  renderTimeline(data.experience.entries, "experience-entries");
 
   setText("projects-eyebrow", data.projects.eyebrow);
   setText("projects-title", data.projects.title);
   setText("projects-aside", data.projects.aside);
-  setText("course-visual-caption", data.projects.course.visualCaption);
-  setText("course-label", data.projects.course.label);
-  setText("course-year", data.projects.course.year);
-  setText("course-title", data.projects.course.title);
-  setText("course-description", data.projects.course.description);
-  appendChips("course-tags", data.projects.course.tags);
-  setText("course-note", data.projects.course.note);
-  setText("research-label", data.projects.research.label);
-  setText("research-title", data.projects.research.title);
-  setText("research-description", data.projects.research.description);
-  appendChips("research-tags", data.projects.research.tags);
-  setText("projects-notice-label", data.projects.noticeLabel);
-  setText("projects-notice", data.projects.notice);
+  renderProjectCards(data.projects.items);
 
   setText("contact-eyebrow", data.contact.eyebrow);
   setText("contact-title", data.contact.title);
